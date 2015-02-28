@@ -25,8 +25,10 @@
 
 		<div class="one fields">
 			<div class="field">
-	
-			<!-- código -->
+		
+			<label>Arquivo *</label>
+		      <input name="arquivo" type="file" required>
+		    </div>
 
 		</div>
 		<br>

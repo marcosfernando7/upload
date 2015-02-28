@@ -1,7 +1,7 @@
 <?php 
 	require 'conexao.php';
  	
- 
+ 	$sql = "SELECT * from pessoa";
  ?>
 <html>
 <head>
@@ -19,11 +19,21 @@
 	<div class="container">
 		<table class="ui striped table">
 			<thead>
-				
+				<tr>
+					<th>Nome</th>
+					<th>Cidade</th>
+					<th>Arquivo</th>
+				</tr>
 			</thead>
 
 			<tbody>
-			
+				<?php foreach ($conexao->query($sql) as $listar) : ?>
+					<tr>
+						<td><?= $listar['nome'] ?></td>
+						<td><?= $listar['cidade'] ?></td>
+						<td><img src="<?= $listar['arquivo'] ?>" width="160" height="120"></td>
+					</tr>
+				<?php endforeach ?>
 			</tbody>
 
 		</table>

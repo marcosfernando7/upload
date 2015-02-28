@@ -17,3 +17,19 @@
 	</form>
 </body>
 </html>
+
+<?php
+
+
+if (isset($_FILES['arquivo'])) {
+
+// echo substr($_FILES['arquivo']['name'], -4) . "<br>";
+echo $_FILES['arquivo']['name'] . "<br>";
+
+echo $_FILES['arquivo']['type'] . "<br>";
+
+echo $_FILES['arquivo']['size'] . "<br>";
+
+echo $_FILES['arquivo']['tmp_name'] . "<br>";
+
+}
